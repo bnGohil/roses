@@ -26,21 +26,8 @@ class SettingScreen extends StatefulWidget {
 
 class _SettingScreenState extends State<SettingScreen> {
   bool _switchValue = false;
-  getData() async {
-    SharedPreferences sharedPreferences = await SharedPreferences.getInstance();
-    var isValue = sharedPreferences.get("isValue");
-    if (isValue == true) {
-      _switchValue = true;
-    } else {
-      _switchValue = false;
-    }
-    setState(() {});
-    print(_switchValue);
-  }
-
   @override
   void initState() {
-    getData();
     // TODO: implement initState
     super.initState();
   }
