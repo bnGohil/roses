@@ -31,32 +31,33 @@ class _SettingScreenState extends State<SettingScreen> {
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width;
     double height = MediaQuery.of(context).size.height;
-    print("my withnskjjcbh ${30/360}");
+    print("my withnskjjcbh ${60/640}");
     return  Scaffold(
       backgroundColor: AppColors.background,
       appBar: CustomAppbar(height: height * 0.09, path: 'assets/svg_image/Vector.svg', text: 'Settings', path2: '',),
-      body: ListView.separated(
+      body: ListView.builder(
           itemBuilder: (context, index) {
-           return Row(
-             mainAxisAlignment: MainAxisAlignment.spaceBetween,
-             children: [
-               Row(
-                 children: [
-                   SizedBox(width: width * 0.08),
-                   Text(settingList[index].name,style: CustomTextStyle.nameText),
-                 ],
-               ),
-               Row(
-                 children: [
-                   Container(child: settingList[index].widget,),
-                   SizedBox(width: width * 0.08),
-                 ],
-               ),
-
-             ],
+           return Container(
+             height: height * 0.08,
+             child: Row(
+               mainAxisAlignment: MainAxisAlignment.spaceBetween,
+               children: [
+                 Row(
+                   children: [
+                     SizedBox(width: width * 0.08),
+                     Text(settingList[index].name,style: CustomTextStyle.nameText),
+                   ],
+                 ),
+                 Row(
+                   children: [
+                     Container(child: settingList[index].widget,),
+                     SizedBox(width: width * 0.08),
+                   ],
+                 ),
+               ],
+             ),
            );
-      }, separatorBuilder: (context, index) {
-        return Divider();
+
       }, itemCount: settingList.length),
     );
   }

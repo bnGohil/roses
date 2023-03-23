@@ -1,0 +1,24 @@
+@font-face {
+    font-family: 'Lempicka Display';
+    src: url('Lempicka-Display.eot');
+    src: local('Lempicka Display'), local('Lempicka-Display'),
+        url('Lempicka-Display.eot?#iefix') format('embedded-opentype'),
+        url('Lempicka-Display.woff2') format('woff2'),
+        url('Lempicka-Display.woff') format('woff'),
+        url('Lempicka-Display.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Lempicka Small Caps';
+    src: url('Lempicka-SmallCaps.eot');
+    src: local('Lempicka Small Caps'), local('Lempicka-SmallCaps'),
+        url('Lempicka-SmallCaps.eot?#iefix') format('embedded-opentype'),
+        url('Lempicka-SmallCaps.woff2') format('woff2'),
+        url('Lempicka-SmallCaps.woff') format('woff'),
+        url('Lempicka-SmallCaps.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
