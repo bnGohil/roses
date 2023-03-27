@@ -26,12 +26,30 @@ class SettingScreen extends StatefulWidget {
 
 class _SettingScreenState extends State<SettingScreen> {
   bool _switchValue = false;
+  SharedPreferences? sharedPreferences;
   @override
   void initState() {
+    getValue();
     // TODO: implement initState
     super.initState();
   }
+  getValue()async{
+    sharedPreferences = await SharedPreferences.getInstance();
+    switch(sharedPreferences?.getBool("switch_value")){
+      case true :
+        setState(() {
+          _switchValue = true;
+        });
+        break ;
+      case false :
+        setState(() {
+          _switchValue = false;
+          sharedPreferences?.remove("switch_value");
+        });
+        break ;
+    }
 
+  }
   @override
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width;
@@ -131,14 +149,17 @@ class _SettingScreenState extends State<SettingScreen> {
   }
 
   Widget switchBtn() {
-    return CustomSwitchBtn(
+    return SwitchButton(
       value: _switchValue,
-      activeColor: AppColors.pink,
-      valueChanged: (value) async {
+      onChanged: (value) async {
         setState(() {
           _switchValue = value;
         });
+        sharedPreferences = await SharedPreferences.getInstance();
+        sharedPreferences?.setBool("switch_value", value);
       },
+      activeColor: AppColors.pink,
+      inactiveColor: AppColors.listLightText,
     );
   }
 }
