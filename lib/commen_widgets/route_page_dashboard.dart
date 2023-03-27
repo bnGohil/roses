@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:roses/colors/app_colors.dart';
 import 'package:roses/commen_widgets/bottem_bar_widget.dart';
 import 'package:roses/commen_widgets/scrollebar_glow_widget.dart';
+import 'package:roses/screens/route_details.dart';
 import '../screens/setting_screen.dart';
 import 'CustomTextStyle.dart';
 import 'TextClass.dart';
@@ -64,7 +65,9 @@ class _RoutePageDashBordState extends State<RoutePageDashBord> {
                       childCount: 20,
                           (context, index) {
                         return InkWell(
-                          onTap: () {},
+                          onTap: () {
+                            Navigator.push(context, MaterialPageRoute(builder: (context) => RouteDetails(),));
+                          },
                           child: Container(
                             margin: EdgeInsets.only(right: width * 0.05,left: width * 0.05),
                             child: Card(

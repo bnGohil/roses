@@ -105,4 +105,11 @@ class CustomTextStyle{
     fontStyle: FontStyle.normal,
     fontWeight: FontWeight.w700,
   );
+  static TextStyle pinkText18 =  const TextStyle(
+    color: AppColors.pink,
+    fontFamily: "Futura PT - Bold",
+    fontSize: 18,
+    fontStyle: FontStyle.normal,
+    fontWeight: FontWeight.w500,
+  );
 }

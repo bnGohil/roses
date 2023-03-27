@@ -11,8 +11,15 @@ class TextClass {
   static const String selectedRot = "ROT";
   static const String email = "Paterjanes12@gmail.com";
   static const String routeNo = "Route No : ";
+  static const String pickNo = "Pick Up : ";
+  static const String dropNo = "Drop Off : ";
   static const String totalPick = "Total Pick Up :";
   static const String totalDropOff = "Total Drop Off :";
   static const String stoppages = "Stoppages : 05";
+  static const String shopCode  = "Shop Code  : 1000";
   static const String completed = "Completed";
+  static const String item = "Items :";
+  static const String city = "City :";
+  static const String state = "State :";
+  static const String country = "Country :";
 }
